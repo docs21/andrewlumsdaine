@@ -1,0 +1,60 @@
+{% extends "basic/layout.html" %}
+{% set css_files = ['_static/css/theme.css'] + css_files %}
+{% set display_github = False %}
+
+
+{%- block scripts %}
+    {{ super() }}
+    <script src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+{%- endblock %}
+
+
+{% block sidebar1 %}{% endblock %}
+{% block sidebar2 %}{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+
+
+{%- block body_tag %}<body class=wy-body-for-nav>{% endblock %}
+{%- block content %}
+<div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="{{ pathto(master_doc) }}" class="icon icon-home"> {{ project }}</a>
+        {% include "searchbox.html" %}
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        {% set toctree = toctree(maxdepth=theme_navigation_depth|int, includehidden=theme_includehidden|tobool, collapse=False) %}
+        {% if toctree %}
+            {{ toctree }}
+        {% else %}
+            {{ toc }}
+        {% endif %}
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">{{ project }}</a>
+      </nav>
+
+
+      {# PAGE CONTENT #}
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          {% include "breadcrumbs.html" %}
+          {% block body %}{% endblock %}
+          {% include "footer.html" %}
+        </div>
+      </div>
+
+    </section>
+</div>
+
+{%- endblock %}
+
