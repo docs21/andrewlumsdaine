@@ -47,7 +47,13 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_title = project
+html_theme_path = ['_themes' ]
+
+html_theme = 'edy_theme'
+html_logo = '_themes/edy_theme/static/css/lums_portrait_small.jpg'
+html_theme_options = { }
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

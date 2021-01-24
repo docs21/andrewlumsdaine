@@ -408,11 +408,21 @@ ul.icons li .icon-large:before, ul.icons li .icon-large:before {
 .icon-trash:before {
 	content: "\f014"
 }
+
 .icon-home:before {
-	content: url('W-Logo_Purple_RGB.png');
-    display: block;
-    margin-bottom: 0.404em
+
 }
+
+.icon-home {
+    content: url('lums_portrait_small.jpg');
+    display: inline-block;
+    height: 180px;
+    width: 180px;
+    margin-bottom: 0.202em;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
 .icon-file-alt:before {
 	content: "\f016"
 }
