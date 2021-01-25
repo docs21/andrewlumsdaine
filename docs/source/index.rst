@@ -17,4 +17,5 @@ Andrew Lumsdaine
 
    about.rst
    research.rst
+   teaching.rst
    publications.rst

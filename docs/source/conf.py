@@ -55,6 +55,7 @@ html_theme_path = ['_themes' ]
 html_theme = 'alabaster'
 
 html_theme_options = {
+    'analytics_id': 'G-YT14YTSBSC',
     'logo': 'lums_portrait_small.jpg',
 #     'github_user': 'bitprophet',
 #     'github_repo': 'alabaster',
@@ -64,7 +65,10 @@ html_theme_options = {
         'Google Scholar' : 'https://scholar.google.com/citations?user=rc_EJ2kAAAAJ',
         'LinkedIn' : 'https://www.linkedin.com/in/andrew-lumsdaine-704782',
     },
-    'analytics_id': 'G-YT14YTSBSC'
+    'font_family': 'Verdana,Helvetica',
+    'head_font_family': 'Verdana,Helvetica',
+    'logo_text_align': 'center',
+
 }
 
 
